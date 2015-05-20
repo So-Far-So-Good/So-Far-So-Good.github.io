@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Freelemon&#39;s open world</title>
+  <title>Concurrency | Freelemon&#39;s open world</title>
   <meta name="author" content="Hongbin Zuo">
   
   <meta name="description" content="Think before write.">
@@ -60,7 +60,11 @@
 </header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper">
-  <article class="post">
+<h2 class="archive-title tag">Concurrency</h2>
+
+
+  
+    <article class="post">
   
     <div class="gallery">
   <div class="photoset">
@@ -78,19 +82,264 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2015-01-21T18:02:45.000Z"><a href="/2015/01/22/HTTP-Status-406/">Jan 22 2015</a></time>
+        <time datetime="2014-11-17T15:29:36.000Z"><a href="/2014/11/17/Two-ways-of-Sequence-Printer-implementation/">Nov 17 2014</a></time>
       
       
   
-    <h1 class="title"><a href="/2015/01/22/HTTP-Status-406/">HTTP Status 406</a></h1>
+    <h1 class="title"><a href="/2014/11/17/Two-ways-of-Sequence-Printer-implementation/">Two ways of Sequence Printer implementation</a></h1>
   
 
     </header>
     <div class="entry">
       
-        <p>用Spring MVC 4.0写一个REST服务，实验的过程中碰到了406错误，具体错误消息如下，</p>
+        <p>题目：两个线程，分别打印[1,3,5]和[2,4,6]，写一个程序，打印[1,2,3,4,5,6]。<br>下面列出两种解法，分别用同步代码块和锁，具体参见程序。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2014/11/17/Two-ways-of-Sequence-Printer-implementation/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  
+    <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2014-11-15T06:57:23.000Z"><a href="/2014/11/15/synchronized-and-ReentrantLock/">Nov 15 2014</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2014/11/15/synchronized-and-ReentrantLock/">synchronized and ReentrantLock</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>ReentrantLock在加锁和内存上提供的语义与内置锁相同，此外它还提供了一些其他功能，包括定时的锁等待、可中断的锁等待、公平性，以及实现非块结构的加锁。ReentrantLock在性能上似乎优于内置锁，其中在Java 6中略有胜出，而在Java 5.0中则是远远胜出。那么为什么不放弃synchronized，并在所有新的并发代码中都使用ReentrantLock？事实上有些作者已经建议这么做，将synchronized作为一种“遗留”的结构，但这会将好事情变坏。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2014/11/15/synchronized-and-ReentrantLock/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  
+    <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2014-11-15T06:21:33.000Z"><a href="/2014/11/15/lock()-and-lockInterruptibly()/">Nov 15 2014</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2014/11/15/lock()-and-lockInterruptibly()/">lock() and lockInterruptibly()</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>在Lock接口中有两个方法，一个是lock方法，一个是lockInterruptibly方法，它们之间具体有什么区别呢？</p>
 <blockquote>
-<p>The resource identified by this request is only capable of generating responses with characteristics not acceptable according to the request “accept” headers.</p>
+<p>lock()是拿不到lock就不罢休，不然线程就一直block。lockInterruptibly会优先响应线程中断，处理响应的方式是抛出InterruptedException。</p>
+</blockquote>
+<p>可以参考一下 <a href="http://huangyunbin.iteye.com/blog/2013543" target="_blank" rel="external">http://huangyunbin.iteye.com/blog/2013543</a> ，我也大概看了一下lock和lockInterruptibly的相关源码，但是感觉原博说的有点不太对，不过因为现在没有太多时间深究，可以现从应用的角度来理解即可。原博中举的例子不错，这里就不重复引用了。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  
+    <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2014-11-15T04:13:26.000Z"><a href="/2014/11/15/TryLock/">Nov 15 2014</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2014/11/15/TryLock/">TryLock</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>《Java并发编程实战》这本书的缺点是有些例子给的不完整，所以想直接复制代码、运行看结果还是比较费力的，第13章显示锁的一个例子就是这样。在这种情况下，只能自己写或求助于互联网。下面用网上的一个小例子演示带有超时功能的tryLock的基本用法。关于Lock和同步代码块的区别以及更深入的研究，后续博文会有所涉及。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2014/11/15/TryLock/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  
+    <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2014-11-09T15:38:59.000Z"><a href="/2014/11/09/CountDownLatch-and-CyclicBarrier/">Nov 9 2014</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2014/11/09/CountDownLatch-and-CyclicBarrier/">CountDownLatch and CyclicBarrier</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>CountDownLatch和CyclicBarrier从字面上理解是“向下数的门闩”和“循环的障碍”，觉得怪怪的，但是即便翻译成更加书面语的“闭锁”或“栅栏”也并不容易理解。《Java并发编程实战》中详细讲解了两者的作用，也举了例子，但理解起来印象不深。如果只是从异同的角度去比较两者，网上倒是有不少文章，但是对于编程实践往往不如通俗的例子来得实在。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2014/11/09/CountDownLatch-and-CyclicBarrier/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  
+    <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2014-11-08T03:56:59.000Z"><a href="/2014/11/08/ThreadLocal/">Nov 8 2014</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2014/11/08/ThreadLocal/">ThreadLocal</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <blockquote>
+<p>当访问共享的可变数据时，通常需要使用同步。一种避免使用同步的方式就是不共享数据。如果仅在单线程内访问数据，就不需要同步。这种技术被称为线程封闭，它是实现线程安全性的最简单方式之一。……在Swing中大量使用了线程封闭技术。……线程封闭技术的另一种常见应用是JDBC的Connection对象。</p>
+<p>Java语言及其核心库提供了一些机制来帮助维持线程封闭性，例如局部变量和ThreadLocal类，但即便如此，程序员仍然需要负责确保封闭在线程中的对象不会从线程中逸出。</p>
 </blockquote>
 
       
@@ -99,7 +348,7 @@
       
         
           <div class="alignleft">
-            <a href="/2015/01/22/HTTP-Status-406/#more" class="more-link">Read More</a>
+            <a href="/2014/11/08/ThreadLocal/#more" class="more-link">Read More</a>
           </div>
         
         
@@ -111,8 +360,8 @@
 
 
 
-
-  <article class="post">
+  
+    <article class="post">
   
     <div class="gallery">
   <div class="photoset">
@@ -130,17 +379,17 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2015-01-19T16:45:18.000Z"><a href="/2015/01/20/VagrantTips/">Jan 20 2015</a></time>
+        <time datetime="2014-11-07T12:04:44.000Z"><a href="/2014/11/07/Future/">Nov 7 2014</a></time>
       
       
   
-    <h1 class="title"><a href="/2015/01/20/VagrantTips/">Vagrant Tips</a></h1>
+    <h1 class="title"><a href="/2014/11/07/Future/">Future</a></h1>
   
 
     </header>
     <div class="entry">
       
-        <p>听说Vagrant管理虚拟机不错，研究了一下Vagrant和Docker的区别，决定安装Vagrant，中间遇到了两个问题，分享如下。</p>
+        <p>之前在看《Java程序员修炼之道》（主要讲的是Java 7的新特性）的时候就看过并发这块儿，但是感觉看完过段儿时间印象也有点儿模糊。最近重温Java并发编程，拿起了《Java并发编程实战》，只能用四个字儿来形容：干货太多。书里讲的几乎没有废话，大部分例子也都不错，对于理解新的Java并发编程模型很有帮助。不过，也有些例子可能受篇幅所限，讲解的不够细致，所以我就需要从网上再找些相对丰富的例子补充上以加深理解。Future就是其中一例。</p>
 
       
     </div>
@@ -148,7 +397,7 @@
       
         
           <div class="alignleft">
-            <a href="/2015/01/20/VagrantTips/#more" class="more-link">Read More</a>
+            <a href="/2014/11/07/Future/#more" class="more-link">Read More</a>
           </div>
         
         
@@ -160,8 +409,8 @@
 
 
 
-
-  <article class="post">
+  
+    <article class="post">
   
     <div class="gallery">
   <div class="photoset">
@@ -179,25 +428,27 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2014-12-18T16:09:48.000Z"><a href="/2014/12/19/Architecture-in-brief-for-Cassandra-20/">Dec 19 2014</a></time>
+        <time datetime="2013-12-12T08:39:36.000Z"><a href="/2013/12/12/what-exactly-invariant-is/">Dec 12 2013</a></time>
       
       
   
-    <h1 class="title"><a href="/2014/12/19/Architecture-in-brief-for-Cassandra-20/">Architecture in brief for Cassandra 2.0</a></h1>
+    <h1 class="title"><a href="/2013/12/12/what-exactly-invariant-is/">What exactly invariant is</a></h1>
   
 
     </header>
     <div class="entry">
       
-        <p><strong>翻译</strong>：<a href="http://weibo.com/openworld/" target="_blank" rel="external">自由的柠檬</a><br><strong>原文链接</strong>：<a href="http://www.datastax.com/documentation/cassandra/2.0/cassandra/architecture/architectureIntro_c.html" target="_blank" rel="external">http://www.datastax.com/documentation/cassandra/2.0/cassandra/architecture/architectureIntro_c.html</a><br><strong>版本</strong>：0.1(2014-12-19 00:09)</p>
-
+        <h1 id="invariant到底是什么意思">invariant到底是什么意思</h1>
+<p>经常在英文计算机书籍或文章中看到invariant这个词，不过如果要我立刻说出它的意思，我的反应肯定是：<strong>一愣</strong>。本着对科学认真负责的态度，还是得上网搜索一下，以正视听，哇哈哈。</p>
+<p>在著名的问答网站<a href="http://www.zhihu.com/" target="_blank" rel="external">知乎</a>上搜索invariant(s)无果，尝试“不变量”、“不变式”均无果。哼，知乎对计算机科学不够重视啊。在国外著名的问答网站<a href="http://www.quora.com" target="_blank" rel="external">Quora</a>也没找到精确结果，囧；只能求助程序员问答网站<a href="http://stackoverflow.com" target="_blank" rel="external">Stackoverflow</a>了，Bingo！果然给力，答案<a href="http://stackoverflow.com/questions/112064/what-is-an-invariant" target="_blank" rel="external">在这</a>。为了更清晰地解释这个概念，我把原文翻译成中文如下：</p>
+<p>
       
     </div>
     <footer>
       
         
           <div class="alignleft">
-            <a href="/2014/12/19/Architecture-in-brief-for-Cassandra-20/#more" class="more-link">Read More</a>
+            <a href="/2013/12/12/what-exactly-invariant-is/#more" class="more-link">Read More</a>
           </div>
         
         
@@ -209,282 +460,14 @@
 
 
 
-
-  <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2014-12-16T14:19:51.000Z"><a href="/2014/12/16/Akka-Tutorial-with-Code-Conncurrency-and-Fault-Tolerance/">Dec 16 2014</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2014/12/16/Akka-Tutorial-with-Code-Conncurrency-and-Fault-Tolerance/">Akka Tutorial with Code: Concurrency and Fault Tolerance</a></h1>
   
 
-    </header>
-    <div class="entry">
-      
-        <h2 id="让并发和容错更容易：Akka示例教程（译文）">让并发和容错更容易：Akka示例教程（译文）</h2>
-<p>BY DIAGO CASTORINA</p>
-<p><strong>翻译</strong>：<a href="http://weibo.com/openworld" target="_blank" rel="external">自由的柠檬</a><br><strong>原文链接</strong>：<a href="http://www.toptal.com/scala/concurrency-and-fault-tolerance-made-easy-an-intro-to-akka" target="_blank" rel="external">http://www.toptal.com/scala/concurrency-and-fault-tolerance-made-easy-an-intro-to-akka</a></p>
-
-      
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2014/12/16/Akka-Tutorial-with-Code-Conncurrency-and-Fault-Tolerance/#more" class="more-link">Read More</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-  <article class="post">
+  <nav id="pagination">
   
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2014-12-09T06:51:26.000Z"><a href="/2014/12/09/Java-performance-tips/">Dec 9 2014</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2014/12/09/Java-performance-tips/">Java performance tips</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>一些有助于改善性能的小技巧</p>
-<ol>
-<li>慎用异常</li>
-<li>使用局部变量</li>
-<li>位运算代替乘除法</li>
-<li>替换switch</li>
-<li>一维数组代替二维数组</li>
-<li>提取表达式</li>
-<li>展开循环</li>
-<li>布尔运算代替位运算</li>
-<li>使用arrayCopy()</li>
-<li>使用Buffer进行I/O操作</li>
-<li>使用clone()代替new</li>
-<li>静态方法替代实例方法</li>
-</ol>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-  <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2014-12-09T04:02:25.000Z"><a href="/2014/12/09/NIO-Buffer/">Dec 9 2014</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2014/12/09/NIO-Buffer/">NIO Buffer</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>简要记录一下Buffer对象的基本原理和操作。</p>
-<h3 id="重要参数">重要参数</h3>
-<p>Buffer中有三个重要的参数，下面的表格描述了它们的作用和区别：</p>
-<p><img alt="Buffer的参数表" src="/img/buffer.png" style="width: 800px;"></p>
-
-      
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2014/12/09/NIO-Buffer/#more" class="more-link">Read More</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-  <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2014-12-09T02:44:02.000Z"><a href="/2014/12/09/NIO-basics/">Dec 9 2014</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2014/12/09/NIO-basics/">NIO basics</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>NIO是在JDK1.4引入的，代表New IO，具有以下特性：</p>
-<ul>
-<li>为所有的原始类型提供缓冲（Buffer）支持</li>
-<li>使用Java.nio.charset.Charset作为字符集编解码解决方案</li>
-<li>增加通道（Channel）对象，作为新的原始I/O抽象</li>
-<li>支持锁和内存映射文件的文件访问接口</li>
-<li>提供了基于Selector的异步网络IO</li>
-</ul>
-
-      
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2014/12/09/NIO-basics/#more" class="more-link">Read More</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-  <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2014-12-08T11:51:26.000Z"><a href="/2014/12/08/Enter-i3/">Dec 8 2014</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2014/12/08/Enter-i3/">Enter i3</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>这几天Ubuntu系统特别慢，鉴于我之前Chrome浏览器经常干到50多个Tab，没事儿就开着IntelliJ和Eclipse的不良记录，我必须寻找更加节省内存、提高效率的方法。首先得反省自己，Chrome不能再开那么多Tab页面了，太吃内存了，最多开15个（^_^）。陈皓（@左耳朵耗子）前几天发了条微博说这事儿，但是Chrome还是得用，一是习惯了，二是还得用红杏插件。所以，我就想能不能让Ubuntu省点内存，于是，开始折腾。</p>
-
-      
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2014/12/08/Enter-i3/#more" class="more-link">Read More</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-
-<nav id="pagination">
-  
-  
-    <a href="/page/2/" class="alignright next">Next</a>
   
   <div class="clearfix"></div>
-</nav></div></div>
+</nav>
+</div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">

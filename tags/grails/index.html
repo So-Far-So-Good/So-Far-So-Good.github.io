@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Freelemon&#39;s open world</title>
+  <title>grails | Freelemon&#39;s open world</title>
   <meta name="author" content="Hongbin Zuo">
   
   <meta name="description" content="Think before write.">
@@ -60,7 +60,11 @@
 </header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper">
-  <article class="post">
+<h2 class="archive-title tag">grails</h2>
+
+
+  
+    <article class="post">
   
     <div class="gallery">
   <div class="photoset">
@@ -78,28 +82,25 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2015-01-21T18:02:45.000Z"><a href="/2015/01/22/HTTP-Status-406/">Jan 22 2015</a></time>
+        <time datetime="2014-01-28T05:53:21.000Z"><a href="/2014/01/28/gorm-query/">Jan 28 2014</a></time>
       
       
   
-    <h1 class="title"><a href="/2015/01/22/HTTP-Status-406/">HTTP Status 406</a></h1>
+    <h1 class="title"><a href="/2014/01/28/gorm-query/">GORM查询</a></h1>
   
 
     </header>
     <div class="entry">
       
-        <p>用Spring MVC 4.0写一个REST服务，实验的过程中碰到了406错误，具体错误消息如下，</p>
-<blockquote>
-<p>The resource identified by this request is only capable of generating responses with characteristics not acceptable according to the request “accept” headers.</p>
-</blockquote>
-
+        <p>GORM是Grails中的一项关键技术，也就是Grails的ORM层，对底层的Hibernate进行了包装，提供了特定的语法，并兼容原有的数据&gt;库查询方式如HQL等。</p>
+<p>根据官方推荐的教程<a href="http://timsporcic.github.io/GORM-Recipes/" target="_blank" rel="external">GORM Recipes</a>，我们可以逐步了解如何使用GORM的方式进行<br>数据库表的操作（教程的例子中使用了两个表，是一对多的关系），并举例说明了如何执行常见的SQL查询。由于原来的test-bed代<br>码是基于Grails 2.0.4的，如果直接下载使用会报错，所以我用<code>grails create-app</code>新建了一个项目，然后把相关代码导入到这个<br>新项目中就可以运行了。除了框架之外，实际上主要是<code>BootStrap.groovy</code>和domain中的<code>Artist.groovy</code>、<code>Work.groovy</code>三个文&gt;件作为支持代码。我把原来教程的脚本练习了一遍，并把联系的脚本源码放到scripts目录中，然后fork了一个repo，地址在：<a href="https://github.com/hongbinzuo/GORM-Recipes" target="_blank" rel="external">GORM Recipes for Grails 2.3.5</a>，可供参考。<br>
       
     </div>
     <footer>
       
         
           <div class="alignleft">
-            <a href="/2015/01/22/HTTP-Status-406/#more" class="more-link">Read More</a>
+            <a href="/2014/01/28/gorm-query/#more" class="more-link">Read More</a>
           </div>
         
         
@@ -111,8 +112,8 @@
 
 
 
-
-  <article class="post">
+  
+    <article class="post">
   
     <div class="gallery">
   <div class="photoset">
@@ -130,17 +131,18 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2015-01-19T16:45:18.000Z"><a href="/2015/01/20/VagrantTips/">Jan 20 2015</a></time>
+        <time datetime="2014-01-23T08:49:03.000Z"><a href="/2014/01/23/grails-encounters-mysql/">Jan 23 2014</a></time>
       
       
   
-    <h1 class="title"><a href="/2015/01/20/VagrantTips/">Vagrant Tips</a></h1>
+    <h1 class="title"><a href="/2014/01/23/grails-encounters-mysql/">当Grails遇上MySQL</a></h1>
   
 
     </header>
     <div class="entry">
       
-        <p>听说Vagrant管理虚拟机不错，研究了一下Vagrant和Docker的区别，决定安装Vagrant，中间遇到了两个问题，分享如下。</p>
+        <h3 id="引语">引语</h3>
+<p>在Grails官方网站推荐的教程里，选择了一个<a href="http://grails.asia/grails-tutorial-for-beginners/" target="_blank" rel="external">初学者教程</a>，看起来不费力。前面讲解一些理论知识如MVC、Groovy、ORM等，讲得不错，简明扼要；然后讲到GORM，这个还是需要动手实验一下的，但是<a href="http://grails.asia/grails-tutorial-for-beginners-introduction-to-gorm/" target="_blank" rel="external">文中的教程</a>实操性不强，于是找到另一篇<a href="http://learnedstuffs.wordpress.com/2012/02/21/using-mysql-as-database-in-grails/" target="_blank" rel="external">Grails/MySQL的使用指南</a>做实验（官方没有这方面的详细教程）。</p>
 
       
     </div>
@@ -148,7 +150,7 @@
       
         
           <div class="alignleft">
-            <a href="/2015/01/20/VagrantTips/#more" class="more-link">Read More</a>
+            <a href="/2014/01/23/grails-encounters-mysql/#more" class="more-link">Read More</a>
           </div>
         
         
@@ -160,8 +162,8 @@
 
 
 
-
-  <article class="post">
+  
+    <article class="post">
   
     <div class="gallery">
   <div class="photoset">
@@ -179,25 +181,24 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2014-12-18T16:09:48.000Z"><a href="/2014/12/19/Architecture-in-brief-for-Cassandra-20/">Dec 19 2014</a></time>
+        <time datetime="2014-01-22T08:17:09.000Z"><a href="/2014/01/22/grails-a-quick-start/">Jan 22 2014</a></time>
       
       
   
-    <h1 class="title"><a href="/2014/12/19/Architecture-in-brief-for-Cassandra-20/">Architecture in brief for Cassandra 2.0</a></h1>
+    <h1 class="title"><a href="/2014/01/22/grails-a-quick-start/">Grails初体验</a></h1>
   
 
     </header>
     <div class="entry">
       
-        <p><strong>翻译</strong>：<a href="http://weibo.com/openworld/" target="_blank" rel="external">自由的柠檬</a><br><strong>原文链接</strong>：<a href="http://www.datastax.com/documentation/cassandra/2.0/cassandra/architecture/architectureIntro_c.html" target="_blank" rel="external">http://www.datastax.com/documentation/cassandra/2.0/cassandra/architecture/architectureIntro_c.html</a><br><strong>版本</strong>：0.1(2014-12-19 00:09)</p>
-
+        <p>Groovy脚本语言由于之前提到的诸多新特性，可以作为JVM平台上Java语言的有力补充，对于熟悉Java语言的开发者无疑是个好消息：能使用非常近似的语法而代码生产力数倍提升，何乐而不为？Groovy语言可以应用在不同的领域，当然因为互联网的缘故，网站应用是语言发展必须要考虑的重点，这也就是为什么<a href="http://zh.wikipedia.org/wiki/%E6%9D%BE%E6%9C%AC%E8%A1%8C%E5%BC%98" target="_blank" rel="external">松本行弘</a>在<a href="http://book.douban.com/subject/24536403/" target="_blank" rel="external">《代码的未来》</a>中提到，由于Rails的流行才使得Ruby语言逐渐火热起来。Grails便是在这种背景下产生的基于Groovy语言的Web开发框架，顾名思义：Grails即为Groovy plus Rails，所以可以理解为JVM平台下的Rails框架。<br>
       
     </div>
     <footer>
       
         
           <div class="alignleft">
-            <a href="/2014/12/19/Architecture-in-brief-for-Cassandra-20/#more" class="more-link">Read More</a>
+            <a href="/2014/01/22/grails-a-quick-start/#more" class="more-link">Read More</a>
           </div>
         
         
@@ -209,282 +210,14 @@
 
 
 
-
-  <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2014-12-16T14:19:51.000Z"><a href="/2014/12/16/Akka-Tutorial-with-Code-Conncurrency-and-Fault-Tolerance/">Dec 16 2014</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2014/12/16/Akka-Tutorial-with-Code-Conncurrency-and-Fault-Tolerance/">Akka Tutorial with Code: Concurrency and Fault Tolerance</a></h1>
   
 
-    </header>
-    <div class="entry">
-      
-        <h2 id="让并发和容错更容易：Akka示例教程（译文）">让并发和容错更容易：Akka示例教程（译文）</h2>
-<p>BY DIAGO CASTORINA</p>
-<p><strong>翻译</strong>：<a href="http://weibo.com/openworld" target="_blank" rel="external">自由的柠檬</a><br><strong>原文链接</strong>：<a href="http://www.toptal.com/scala/concurrency-and-fault-tolerance-made-easy-an-intro-to-akka" target="_blank" rel="external">http://www.toptal.com/scala/concurrency-and-fault-tolerance-made-easy-an-intro-to-akka</a></p>
-
-      
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2014/12/16/Akka-Tutorial-with-Code-Conncurrency-and-Fault-Tolerance/#more" class="more-link">Read More</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-  <article class="post">
+  <nav id="pagination">
   
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2014-12-09T06:51:26.000Z"><a href="/2014/12/09/Java-performance-tips/">Dec 9 2014</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2014/12/09/Java-performance-tips/">Java performance tips</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>一些有助于改善性能的小技巧</p>
-<ol>
-<li>慎用异常</li>
-<li>使用局部变量</li>
-<li>位运算代替乘除法</li>
-<li>替换switch</li>
-<li>一维数组代替二维数组</li>
-<li>提取表达式</li>
-<li>展开循环</li>
-<li>布尔运算代替位运算</li>
-<li>使用arrayCopy()</li>
-<li>使用Buffer进行I/O操作</li>
-<li>使用clone()代替new</li>
-<li>静态方法替代实例方法</li>
-</ol>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-  <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2014-12-09T04:02:25.000Z"><a href="/2014/12/09/NIO-Buffer/">Dec 9 2014</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2014/12/09/NIO-Buffer/">NIO Buffer</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>简要记录一下Buffer对象的基本原理和操作。</p>
-<h3 id="重要参数">重要参数</h3>
-<p>Buffer中有三个重要的参数，下面的表格描述了它们的作用和区别：</p>
-<p><img alt="Buffer的参数表" src="/img/buffer.png" style="width: 800px;"></p>
-
-      
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2014/12/09/NIO-Buffer/#more" class="more-link">Read More</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-  <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2014-12-09T02:44:02.000Z"><a href="/2014/12/09/NIO-basics/">Dec 9 2014</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2014/12/09/NIO-basics/">NIO basics</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>NIO是在JDK1.4引入的，代表New IO，具有以下特性：</p>
-<ul>
-<li>为所有的原始类型提供缓冲（Buffer）支持</li>
-<li>使用Java.nio.charset.Charset作为字符集编解码解决方案</li>
-<li>增加通道（Channel）对象，作为新的原始I/O抽象</li>
-<li>支持锁和内存映射文件的文件访问接口</li>
-<li>提供了基于Selector的异步网络IO</li>
-</ul>
-
-      
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2014/12/09/NIO-basics/#more" class="more-link">Read More</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-  <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2014-12-08T11:51:26.000Z"><a href="/2014/12/08/Enter-i3/">Dec 8 2014</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2014/12/08/Enter-i3/">Enter i3</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>这几天Ubuntu系统特别慢，鉴于我之前Chrome浏览器经常干到50多个Tab，没事儿就开着IntelliJ和Eclipse的不良记录，我必须寻找更加节省内存、提高效率的方法。首先得反省自己，Chrome不能再开那么多Tab页面了，太吃内存了，最多开15个（^_^）。陈皓（@左耳朵耗子）前几天发了条微博说这事儿，但是Chrome还是得用，一是习惯了，二是还得用红杏插件。所以，我就想能不能让Ubuntu省点内存，于是，开始折腾。</p>
-
-      
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2014/12/08/Enter-i3/#more" class="more-link">Read More</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-
-<nav id="pagination">
-  
-  
-    <a href="/page/2/" class="alignright next">Next</a>
   
   <div class="clearfix"></div>
-</nav></div></div>
+</nav>
+</div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
