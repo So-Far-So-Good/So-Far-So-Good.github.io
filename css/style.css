@@ -9,7 +9,7 @@
   padding: 0;
 }
 body {
-  background: #eee;
+  background: #92b3a2 url(../img/bg.jpg) repeat 0 0;
   color: #444;
   font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
   font-size: 14px;
@@ -136,7 +136,7 @@ a:hover {
 article {
   -webkit-box-shadow: 1px 2px 3px #ddd;
   box-shadow: 1px 2px 3px #ddd;
-  background: #fff;
+  background: #E9F7E8;
 }
 article.page {
   padding-left: 20px;
@@ -554,7 +554,7 @@ article footer .addthis iframe {
   }
 }
 #sidebar .widget {
-  background: #fff;
+  background: #E8E8DA;
   -webkit-box-shadow: 1px 2px 3px #ddd;
   box-shadow: 1px 2px 3px #ddd;
   margin-bottom: 30px;
