@@ -133,6 +133,11 @@ a:hover {
   float: left;
   margin-left: 30px;
 }
+
+.musicbox {
+  padding: 0 auto;
+  margin-bottom: 50px;
+}
 article {
   -webkit-box-shadow: 1px 2px 3px #ddd;
   box-shadow: 1px 2px 3px #ddd;
