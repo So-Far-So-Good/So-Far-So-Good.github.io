@@ -70,7 +70,7 @@
 <div id="content" class="inner">
   <div id="main-col" class="alignleft"><div id="wrapper">
 
-    <div class="musicbox"><iframe name="iframe_canvas" src="http://douban.fm/partner/baidu/doubanradio" scrolling="no" frameborder="0" width="420" height="186"></iframe></div>
+    <!--<div class="musicbox"><iframe name="iframe_canvas" src="http://douban.fm/partner/baidu/doubanradio" scrolling="no" frameborder="0" width="420" height="186"></iframe></div>-->
 
 
     <article class="post">
@@ -580,22 +580,37 @@
 
 
     <div class="widget tag">
-      <h3 class="title">最近喜欢的音乐</h3>
-      <div><script src="http://img3.douban.com/f/shire/9e4df2475de830f8f347ad9053d8a3be5a4fdf08/js/radiowidget.js?doubanid=86821031&maxresults=5"></script></div>
-    </div>
+    <h3 class="title"></h3>
+      <div class="entry"><!-- 多说最新评论 start -->
+        <div class="ds-recent-comments" data-num-items="10" data-show-avatars="1" data-show-time="1" data-show-title="1" data-show-admin="1" data-excerpt-length="70"></div>
+        <!-- 多说最新评论 end -->
+        <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+        <script type="text/javascript">
+          var duoshuoQuery = {short_name:"chencheng"};
+          (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.unstable.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0] 
+             || document.getElementsByTagName('body')[0]).appendChild(ds);
+          })();
+        </script>
+        <!-- 多说公共JS代码 end --></div>
+      </div>
 
-  </aside>
+    </aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+
+    &copy; 2015  So Far So Good
+
+    &nbsp;
+    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_5480678'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/stat.php%3Fid%3D5480678%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+
+  </div>
   <div class="clearfix"></div>
-</div>
-<footer id="footer" class="inner"><div class="alignleft">
-
-  &copy; 2015  So Far So Good
-  
-  &nbsp;
-  <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_5480678'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/stat.php%3Fid%3D5480678%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
-
-</div>
-<div class="clearfix"></div>
 
 
 </footer>
